@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Mohammad Rashid — Exclusive Trading Channel</title>
+<title>Mohammad Rashid — Stock Market Education</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <script>
@@ -43,7 +43,6 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── PAGE ── */
 .page {
   width:100vw;
   height:100dvh;
@@ -54,7 +53,6 @@ html, body {
   overflow:hidden;
 }
 
-/* ── BACKGROUND ── */
 .bg {
   position:absolute; inset:0; z-index:0;
   background:
@@ -76,7 +74,7 @@ html, body {
   background-size:180px 180px; opacity:.35; pointer-events:none;
 }
 
-/* ── TOP BAR ── */
+/* TOP BAR */
 .dl-bar {
   position:relative; z-index:10;
   width:100%; flex-shrink:0;
@@ -94,7 +92,7 @@ html, body {
 }
 @keyframes slideDown { from{opacity:0;transform:translateY(-100%)} to{opacity:1;transform:translateY(0)} }
 
-/* ── CARD ── */
+/* CARD */
 .card {
   position:relative; z-index:5;
   display:flex; flex-direction:column; align-items:center;
@@ -103,7 +101,7 @@ html, body {
   justify-content:space-evenly;
 }
 
-/* ── AVATAR ── */
+/* AVATAR */
 .av-section {
   display:flex; flex-direction:column; align-items:center;
   animation: riseIn .6s cubic-bezier(.22,1,.36,1) both .1s;
@@ -137,19 +135,17 @@ html, body {
 @keyframes avatarFloat {
   0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-7px) scale(1.02)}
 }
-.live-badge {
+
+/* EDUCATION badge (replacing LIVE) */
+.edu-badge {
   position:absolute; bottom:1px; left:50%; transform:translateX(-50%);
-  background:linear-gradient(135deg,#c62828,#e53935);
+  background:linear-gradient(135deg,#1a6b2e,#27a845);
   padding:2px 9px; border-radius:20px;
   font-size:9px; font-weight:800; letter-spacing:1.2px;
   display:flex; align-items:center; gap:4px;
-  box-shadow:0 2px 12px rgba(229,57,53,.6); white-space:nowrap; z-index:2;
+  box-shadow:0 2px 12px rgba(39,168,69,.5); white-space:nowrap; z-index:2;
 }
-.live-dot {
-  width:5px; height:5px; background:#fff; border-radius:50%;
-  animation:liveDot .9s ease-in-out infinite;
-}
-@keyframes liveDot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.3;transform:scale(.7)} }
+
 .name {
   font-family:'Playfair Display',serif;
   font-size:clamp(22px,6vw,30px); font-weight:900; letter-spacing:1px;
@@ -162,7 +158,7 @@ html, body {
   letter-spacing:2.5px; text-transform:uppercase; color:rgba(212,175,55,.5); text-align:center;
 }
 
-/* ── MEMBER STRIP ── */
+/* MEMBER STRIP */
 .member-strip {
   display:flex; align-items:center; gap:10px;
   padding:9px 20px;
@@ -179,7 +175,7 @@ html, body {
 .member-lbl { font-size:11px; font-weight:700; color:#fff; letter-spacing:.5px; }
 .member-sub { font-size:9px; color:rgba(255,255,255,.38); letter-spacing:.5px; }
 
-/* ── TICKER ── */
+/* TICKER */
 .ticker-outer {
   width:100%; overflow:hidden;
   border-radius:8px; border:1px solid rgba(255,255,255,.06);
@@ -195,7 +191,7 @@ html, body {
 .tick-name { color:rgba(255,255,255,.45); font-weight:600; }
 @keyframes tickRun { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
-/* ── PILLS ── */
+/* PILLS */
 .pills {
   display:flex; gap:8px; width:100%;
   animation: riseIn .6s cubic-bezier(.22,1,.36,1) both .4s;
@@ -210,7 +206,7 @@ html, body {
 .pill-txt { font-size:10px; font-weight:700; color:#fff; }
 .pill-sub { font-size:9px; color:rgba(255,255,255,.32); }
 
-/* ── DESC ── */
+/* DESC */
 .desc-block {
   width:100%; background:var(--card); border:1px solid var(--border);
   border-radius:14px; padding:11px 16px; text-align:center;
@@ -226,13 +222,11 @@ html, body {
 }
 @keyframes topLine { from{opacity:.4;transform:scaleX(.5)} to{opacity:1;transform:scaleX(1)} }
 
-/* ── BIG CTA BUTTON ── */
+/* CTA BUTTON */
 .cta-area {
   width:100%; display:flex; flex-direction:column; align-items:center; gap:9px;
   animation: riseIn .6s cubic-bezier(.22,1,.36,1) both .55s;
 }
-
-/* glowing halo behind button */
 .btn-halo {
   position:relative; width:100%;
 }
@@ -249,7 +243,6 @@ html, body {
 @keyframes haloGrad {
   0%,100%{background-position:0% 50%} 50%{background-position:100% 50%}
 }
-
 .cta-btn {
   position:relative; z-index:1;
   display:flex; align-items:center; justify-content:center; gap:14px;
@@ -276,8 +269,6 @@ html, body {
 @keyframes btnGradSlide {
   0%,100%{background-position:0% 50%} 50%{background-position:100% 50%}
 }
-
-/* shine sweep */
 .cta-btn::before {
   content:''; position:absolute;
   top:-60%; left:-80%;
@@ -287,15 +278,12 @@ html, body {
   animation:btnShine 2s ease-in-out infinite;
 }
 @keyframes btnShine { 0%{left:-80%} 44%,100%{left:130%} }
-
-/* bottom accent line */
 .cta-btn::after {
   content:''; position:absolute;
   bottom:0; left:18%; right:18%; height:2px;
   background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);
   border-radius:2px;
 }
-
 .btn-icon {
   font-size:24px; position:relative; z-index:1;
   animation:planeWobble 2.2s ease-in-out infinite;
@@ -310,14 +298,23 @@ html, body {
   display:block; font-size:10px; font-weight:600;
   opacity:.65; letter-spacing:.8px; margin-top:2px;
 }
-
 .cta-note {
   font-size:11px; color:rgba(255,255,255,.27);
   display:flex; align-items:center; gap:5px; letter-spacing:.2px;
 }
-.cta-note::before { content:'⚡'; }
+.cta-note::before { content:'📚'; }
 
-/* ── FOOTER ── */
+/* RISK DISCLAIMER — Meta Compliant */
+.disclaimer {
+  width:100%; background:rgba(255,82,82,.04);
+  border:1px solid rgba(255,82,82,.15);
+  border-radius:10px; padding:8px 12px; text-align:center;
+  font-size:9.5px; color:rgba(255,255,255,.32); line-height:1.6;
+  animation: riseIn .6s ease both .6s;
+}
+.disclaimer strong { color:rgba(255,180,180,.5); font-weight:700; }
+
+/* FOOTER */
 .footer {
   position:relative; z-index:5; flex-shrink:0;
   padding:6px 0 8px; font-size:11px; color:rgba(255,255,255,.22); text-align:center;
@@ -325,10 +322,8 @@ html, body {
 }
 .footer a { color:rgba(212,175,55,.55) !important; font-weight:700; text-decoration:none; }
 
-/* ── SHARED ── */
 @keyframes riseIn { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
 
-/* ── RESPONSIVE ── */
 @media (min-height:760px) {
   .av-outer { width:118px; height:118px; }
   .cta-btn  { padding:20px 24px; }
@@ -363,10 +358,10 @@ html, body {
           src="https://divinehaven.online/image/mohoo.jpg"
           onerror="this.src='https://ui-avatars.com/api/?name=MR&background=1a1a2e&color=D4AF37&bold=true&size=120'"
           alt="Mohammad Rashid">
-        <div class="live-badge"><div class="live-dot"></div>LIVE</div>
+        <div class="edu-badge">📚 EDUCATOR</div>
       </div>
       <div class="name">Mohammad Rashid</div>
-      <div class="tagline">Premium Trading Signals</div>
+      <div class="tagline">Free Market Education Community</div>
     </div>
 
     <!-- MEMBERS -->
@@ -374,8 +369,8 @@ html, body {
       <div class="member-num">56,432</div>
       <div class="member-sep"></div>
       <div class="member-right">
-        <span class="member-lbl">Active Members</span>
-        <span class="member-sub">TRUSTED COMMUNITY</span>
+        <span class="member-lbl">Community Learners</span>
+        <span class="member-sub">FREE EDUCATIONAL GROUP</span>
       </div>
     </div>
 
@@ -399,17 +394,17 @@ html, body {
       </div>
     </div>
 
-    <!-- PILLS -->
+    <!-- PILLS — education focused -->
     <div class="pills">
-      <div class="pill"><div class="pill-icon">🎯</div><div class="pill-txt">High Accuracy</div><div class="pill-sub">Signals</div></div>
-      <div class="pill"><div class="pill-icon">⚡</div><div class="pill-txt">Real-Time</div><div class="pill-sub">Updates</div></div>
-      <div class="pill"><div class="pill-icon">🔒</div><div class="pill-txt">Trusted</div><div class="pill-sub">Since 2019</div></div>
+      <div class="pill"><div class="pill-icon">📖</div><div class="pill-txt">Market</div><div class="pill-sub">Education</div></div>
+      <div class="pill"><div class="pill-icon">🧠</div><div class="pill-txt">Learn</div><div class="pill-sub">& Analyse</div></div>
+      <div class="pill"><div class="pill-icon">🆓</div><div class="pill-txt">100% Free</div><div class="pill-sub">Community</div></div>
     </div>
 
-    <!-- DESC -->
+    <!-- DESC — educational framing -->
     <div class="desc-block">
-      <em>Learn, Analyse &amp; Grow</em> — A trusted learning<br>
-      community for market awareness &amp; smart investing
+      <em>Learn, Analyse &amp; Grow</em> — A free educational community<br>
+      for understanding markets &amp; building financial awareness
     </div>
 
     <!-- BUTTON -->
@@ -420,18 +415,23 @@ html, body {
            onclick="fbq('track','JoinClick',{uuid:'3e372e40-80f9-4e61-b135-6ac0d32f871b'})">
           <span class="btn-icon">✈️</span>
           <div class="btn-label">
-            Join on Telegram
-            <small>Tap for instant access</small>
+            Join Free on Telegram
+            <small>Free educational community</small>
           </div>
         </a>
       </div>
-      <div class="cta-note">Opens directly in Telegram app</div>
+      <div class="cta-note">Educational content only — not investment advice</div>
+    </div>
+
+    <!-- META-COMPLIANT RISK DISCLAIMER -->
+    <div class="disclaimer">
+      <strong>⚠️ Disclaimer:</strong> This is a free educational community only. All content shared is for <strong>learning and awareness purposes</strong> only and does <strong>not</strong> constitute financial, investment, or trading advice. Past market discussions do not guarantee future results. Trading in securities involves <strong>substantial risk of loss</strong>. Please consult a SEBI-registered financial advisor before making any investment decisions.
     </div>
 
   </div>
 
   <div class="footer">
-    Managed by <a href="https://telegram.me/+TRlJl628l-FkMWE9">@Nexgroww_agency</a>
+    Managed by <a href="https://telegram.me/+TRlJl628l-FkMWE9">@Nexgroww_agency</a> &nbsp;|&nbsp; Educational Content Only
   </div>
 </div>
 </body>
